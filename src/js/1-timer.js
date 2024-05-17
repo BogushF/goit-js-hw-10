@@ -72,6 +72,9 @@ buttonStart.addEventListener('click', () => {
     timerMinutes.textContent = addLeadingZero(minutes);
     timerSeconds.textContent = addLeadingZero(seconds);
 
-    if (diff < 1000) clearInterval(intervalId);
+    if (diff < 1000) {
+      clearInterval(intervalId);
+      inputDate.disabled = false;
+    }
   }, 1000);
 });
